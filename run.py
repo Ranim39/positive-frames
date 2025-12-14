@@ -661,7 +661,7 @@ def run_gpt2_unconstrained():
     tf.reset_default_graph()
     sess = gpt2.start_tf_sess()
     gpt2.finetune(sess,
-                dataset=file_name,
+                dataset='data/wholedev.csv',
                 model_name='124M',
                 steps=1000,
                 restore_from='fresh',
